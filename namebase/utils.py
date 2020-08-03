@@ -77,8 +77,6 @@ class Request(object):
         )
         u = self.url + "/dns/domains/" + name+"/nameserver"
         print(u)
-        print(params)
-        print(self.headers)
-        r = requests.put(url=u, headers=self.headers, json=params)
+        r = requests.put(url=u, headers=self.headers, json=params, timeout=3)
 
         return r

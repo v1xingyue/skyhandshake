@@ -4,6 +4,7 @@ import tornado.web
 import siaskynet as skynet
 import hashlib
 from namebase.dns import status, markTXT, getNsServer
+import mimetypes
 
 rootName = "vml"
 
@@ -22,15 +23,16 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         f = self.request.path[1:]
         pathHash = hashlib.md5(f.encode()).hexdigest()
-        print(pathHash)
+        print("pathHash", pathHash)
         records = getNsServer(rootName).get("records")
         for r in records:
             print(r.get("host"))
             if r.get("host") == pathHash:
                 # return self.write("hello find " + pathHash)
                 resp = skynet.Skynet.download_file_request(r.get("value"))
-                self.set_header("Content-type", "text/html")
-                print(resp.headers)
+                mimeTypes = mimetypes.guess_type(f, strict=True)
+                if mimeTypes[0] != None:
+                    self.set_header("Content-type", mimeTypes[0])
                 return self.write(resp.content)
 
         self.write("Hello, world " + pathHash)
@@ -49,5 +51,9 @@ def skyServer():
 
 
 if __name__ == '__main__':
+    updateSkyHandshake("19622.jpg")
     updateSkyHandshake("index.html")
+    updateSkyHandshake("a.css")
+    updateSkyHandshake("a.js")
+    print("start skyserver")
     skyServer()
