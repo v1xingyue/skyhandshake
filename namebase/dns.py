@@ -1,14 +1,8 @@
 # coding=utf-8
 
 import namebase.utils as nu
-import json
 from namebase.config import access_key, secret_key
-
-
-def status(name):
-    r = nu.Request(nu.authHeaders(access_key, secret_key))
-    resp = r.get("/dns/domains/"+name)
-    print(resp)
+import logging
 
 
 def getNsServer(name):
@@ -17,7 +11,20 @@ def getNsServer(name):
     return resp
 
 
-def markTXT(name, prefix, value):
+def markTXT(name, prefix, value, ttl=1800):
+    logging.info("mark txt record : %s ", prefix)
     r = nu.Request(nu.authHeaders(access_key, secret_key))
-    resp = r.setTxt(name, prefix, value)
-    print(resp.content, resp.status_code)
+    params = {
+        "records": [
+             {
+                 "type": "TXT",
+                 "host": prefix,
+                 "value": value,
+                 "ttl": ttl,
+             }
+        ],
+        "deleteRecords": []
+    }
+    path = "/dns/domains/" + name+"/nameserver"
+    resp = r.put(path, params)
+    return resp

@@ -52,31 +52,34 @@ class Request(object):
         r.raise_for_status()
         return r.json()
 
-    def status(self):
-        r = requests.get(url=self.url + "/info", headers=self.headers)
+    def put(self, path, params):
+        r = requests.put(url=self.url + path, json=params,
+                         timeout=3, headers=self.headers)
         r.raise_for_status()
         return r.json()
 
-    def setTxt(self, name, prefix, txt):
-        params = {
-            "records": [
-                {
-                    "type": "TXT",
-                    "host": prefix,
-                    "value": txt,
-                    "ttl": 3600,
-                }
-            ],
-            "deleteRecords": []
-        }
+    # def status(self):
+    #     r = requests.get(url=self.url + "/info", headers=self.headers)
+    #     r.raise_for_status()
+    #     return r.json()
 
-        print(json.dumps(params))
+    # def setTxt(self, name, prefix, txt):
+    #     params = {
+    #         "records": [
+    #             {
+    #                 "type": "TXT",
+    #                 "host": prefix,
+    #                 "value": txt,
+    #                 "ttl": 3600,
+    #             }
+    #         ],
+    #         "deleteRecords": []
+    #     }
 
-        print(
-            '{"records":[{"type":"TXT","host":"info.vml","value":"ssssssss","ttl":3600}],"deleteRecords":[]}'
-        )
-        u = self.url + "/dns/domains/" + name+"/nameserver"
-        print(u)
-        r = requests.put(url=u, headers=self.headers, json=params, timeout=3)
+    #     print(json.dumps(params))
 
-        return r
+    #     u = self.url + "/dns/domains/" + name+"/nameserver"
+    #     print(u)
+    #     r = requests.put(url=u, headers=self.headers, json=params, timeout=3)
+
+    #     return r
