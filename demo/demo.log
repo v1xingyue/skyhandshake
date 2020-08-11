@@ -1,0 +1,37 @@
+Tue, 11 Aug 2020 13:31:45 file.py[line:18] INFO update index.html to skynet 
+Tue, 11 Aug 2020 13:31:53 file.py[line:20] INFO skylink : sia://AABnRy5Dn4oTbDK4qjaEVlBov9kAuoLK4KkP5Hh_B9dxiQ
+Tue, 11 Aug 2020 13:31:53 file.py[line:22] INFO path hash : eacf331f0ffc35d4b482f1d15a887d3b 
+Tue, 11 Aug 2020 13:31:53 dns.py[line:15] INFO mark txt record : eacf331f0ffc35d4b482f1d15a887d3b 
+Tue, 11 Aug 2020 13:31:54 file.py[line:18] INFO update a.js to skynet 
+Tue, 11 Aug 2020 13:32:01 file.py[line:20] INFO skylink : sia://AADFn9dpzJHld9mnP6X0VFJjG9plg9S6zXYaMINxFpyPzw
+Tue, 11 Aug 2020 13:32:01 file.py[line:22] INFO path hash : 95f0a310f289230d56c3a4949c17963e 
+Tue, 11 Aug 2020 13:32:01 dns.py[line:15] INFO mark txt record : 95f0a310f289230d56c3a4949c17963e 
+Tue, 11 Aug 2020 13:32:03 file.py[line:18] INFO update a.css to skynet 
+Tue, 11 Aug 2020 13:32:08 file.py[line:20] INFO skylink : sia://AADHqUpsVnJdITJYscV2GJowCFklTU8rnKyQaaU83Ah6dQ
+Tue, 11 Aug 2020 13:32:08 file.py[line:22] INFO path hash : c19446cb255bbca24452dd39886c66e5 
+Tue, 11 Aug 2020 13:32:08 dns.py[line:15] INFO mark txt record : c19446cb255bbca24452dd39886c66e5 
+Tue, 11 Aug 2020 13:32:10 file.py[line:18] INFO update img.jpg to skynet 
+Tue, 11 Aug 2020 13:32:18 file.py[line:20] INFO skylink : sia://TABvhDn3SJNS94j-e_VAYYwCmUk0OOwVYbIGdkhpIKMURA
+Tue, 11 Aug 2020 13:32:18 file.py[line:22] INFO path hash : 82341a6c6f03e3af261a95ba81050c0a 
+Tue, 11 Aug 2020 13:32:18 dns.py[line:15] INFO mark txt record : 82341a6c6f03e3af261a95ba81050c0a 
+Tue, 11 Aug 2020 13:32:21 sample.py[line:17] INFO start skyserver
+Tue, 11 Aug 2020 13:32:21 server.py[line:46] INFO start server : 8080 
+Tue, 11 Aug 2020 13:32:37 file.py[line:27] INFO download file : index.html 
+Tue, 11 Aug 2020 13:32:37 file.py[line:29] INFO pathHash eacf331f0ffc35d4b482f1d15a887d3b 
+Tue, 11 Aug 2020 13:32:43 web.py[line:2250] INFO 200 GET / (218.30.113.46) 6355.61ms
+Tue, 11 Aug 2020 13:32:43 file.py[line:27] INFO download file : a.css 
+Tue, 11 Aug 2020 13:32:43 file.py[line:29] INFO pathHash c19446cb255bbca24452dd39886c66e5 
+Tue, 11 Aug 2020 13:32:43 file.py[line:34] INFO use namebase cache
+Tue, 11 Aug 2020 13:32:48 web.py[line:2250] INFO 200 GET /a.css (218.30.113.46) 4407.83ms
+Tue, 11 Aug 2020 13:32:48 file.py[line:27] INFO download file : a.js 
+Tue, 11 Aug 2020 13:32:48 file.py[line:29] INFO pathHash 95f0a310f289230d56c3a4949c17963e 
+Tue, 11 Aug 2020 13:32:48 file.py[line:34] INFO use namebase cache
+Tue, 11 Aug 2020 13:32:50 web.py[line:2250] INFO 200 GET /a.js (218.30.113.46) 2022.57ms
+Tue, 11 Aug 2020 13:32:50 file.py[line:27] INFO download file : img.jpg 
+Tue, 11 Aug 2020 13:32:50 file.py[line:29] INFO pathHash 82341a6c6f03e3af261a95ba81050c0a 
+Tue, 11 Aug 2020 13:32:50 file.py[line:34] INFO use namebase cache
+Tue, 11 Aug 2020 13:33:02 web.py[line:2250] INFO 200 GET /img.jpg (218.30.113.46) 11828.88ms
+Tue, 11 Aug 2020 13:33:02 file.py[line:27] INFO download file : favicon.ico 
+Tue, 11 Aug 2020 13:33:02 file.py[line:29] INFO pathHash 8af3a74ede48e250ceb935c026242483 
+Tue, 11 Aug 2020 13:33:02 file.py[line:34] INFO use namebase cache
+Tue, 11 Aug 2020 13:33:02 web.py[line:2250] INFO 200 GET /favicon.ico (218.30.113.46) 0.76ms

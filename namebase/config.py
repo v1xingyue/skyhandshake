@@ -1,4 +1,4 @@
 # coding=utf-8
 
-access_key = "eaec6a210494a039ce6a6bf00385fc4a1ea4d54ade97d3e69c3ae965928c2c1d"
-secret_key = "7f51ac4186d440e10334e1d3bc3d6de5d3b677f391ce26a97e8dbec4c91cce20"
+access_key = "3260876461b1a20ddf79ffd4b1a8ad66679dc190e55e9ac02aaefd2823195fe4"
+secret_key = "148faad1c18d6ca847b311053bae0dba620956d5f62c6f569461b72506b16326"
